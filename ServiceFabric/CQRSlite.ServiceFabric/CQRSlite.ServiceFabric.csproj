@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp2.0;net452</TargetFrameworks>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0' ">
+    <PackageReference Include="Microsoft.ServiceFabric" Version="6.1.232-preview" />
+    <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="3.0.232-preview" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="3.0.232-preview" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net452' ">
+    <PackageReference Include="Microsoft.ServiceFabric" Version="6.0.232" />
+    <PackageReference Include="Microsoft.ServiceFabric.Actors" Version="2.8.232" />
+    <PackageReference Include="Microsoft.ServiceFabric.Services" Version="2.8.232" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\CQRSlite\CQRSlite.csproj" />
+  </ItemGroup>
+
+</Project>
